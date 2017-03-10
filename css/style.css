@@ -1,0 +1,75 @@
+html, body {
+  background: url("../img/bg.jpg") center no-repeat;
+  height: 100%;
+  background-size: cover;
+}
+@media(max-width: 768px) {
+  #logo img {
+    width: 50%;
+  }
+  /*#intro {
+    font-size: 2em !important;
+  }*/
+  #counter .countdown {
+    font-size: 1.2em !important;
+  }
+  #icons .fa {
+    margin: 10px 0 0 !important;
+    font-size: 2em;
+  }
+}
+@media(min-width: 321px) and (max-width: 568px) {
+  #logo img {
+    width: 20%;
+  }
+}
+
+
+#logo img {
+  padding-top: 20px;
+}
+#intro {
+  color: white;
+  /*text-align: center;*/
+  font-family: 'Just Another Hand', cursive;
+  font-size: 3em;
+}
+#counter .countdown {
+  /*text-align: center;*/
+  color: white;
+  font-family: 'Amatic SC', cursive;
+  font-size: 4em;
+  font-weight: bold;
+}
+#icons .fa {
+  padding: .5em;
+  color: white;
+  position: relative;
+  bottom: 0;
+  transition: all 0.2s ease-in-out; //not necessary but make hover transition smoothly
+}
+#icons .twitter:hover {
+  color:#6cadde;
+  bottom: 5px;
+}
+#icons .facebook:hover {
+  color:#3b5998;
+  bottom: 5px;
+}
+#icons .linkedin:hover{
+  color:#6cadde;
+  bottom: 5px;
+}
+/*#signup {
+  text-align: center;
+}*/
+#signup .form-inline {
+  display: block;
+}
+#signup .btn {
+  background-color: rgba(161, 186, 226, 0.5);
+  color: white;
+}
+#signup .btn:hover {
+  background-color: rgba(37, 185, 82, 1);
+}
