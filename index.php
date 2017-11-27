@@ -1,23 +1,3 @@
-<?php
-  if (isset($_POST['submit'])) {
-    $from = $_POST['email'];
-    $to = 'php@coderandyc.com';//change to personal email
-    $subject = 'Email singup';
-    $body = 'Please sign me up to the mailing list';
-
-    if (!$_POST['email']) {
-      $emailError = "Please enter a valid email address!";
-    }
-    if (!$emailError) {
-      if(mail($to, $subject, $body, $from)) {
-        $result = 'Thank you! We will keep you updated!';
-      } else {
-        $result = 'Sorry! There has been an error, please try again!';
-      }
-    }
-  }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -72,13 +52,13 @@
         <div class="row">
           <div class="col-md-12 text-center">
             <ul class="list-inline">
-              <a href="http://www.twitter.com" target="_blank">
+              <a href="http://www.twitter.com/Shawnxxy" target="_blank">
                 <li class="list-inline-item"><i class="fa fa-twitter-square fa-4x twitter" aria-hidden="true"></i></li>
               </a>
-              <a href="http://www.facebook.com" target="_blank">
+              <a href="http://www.facebook.com/shawnxxy" target="_blank">
                 <li class="list-inline-item"><i class="fa fa-facebook-square fa-4x facebook" aria-hidden="true"></i></li>
               </a>
-              <a href="http://www.linkedin.com" target="_blank">
+              <a href="http://www.linkedin.com/in/shawnxxy" target="_blank">
                 <li class="list-inline-item"><i class="fa fa-linkedin-square fa-4x linkedin" aria-hidden="true"></i></li>
               </a>
             </ul>
@@ -92,7 +72,26 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center">
-            <form class="form-inline" role="form" method="post" action="#signup">
+            <form class="form-inline" role="form" method="post" action="index.php">
+                <?php
+                  if (isset($_POST['submit'])) {
+                    $from = $_POST['email'];
+                    $to = 'shawnxxy@hotmail.com';
+                    $subject = 'Email singup';
+                    $body = 'Please sign me up to the mailing list';
+
+                    if (!$_POST['email']) {
+                      $emailError = "Please enter a valid email address!";
+                    }
+                    if (!$emailError) {
+                      if(mail($to, $subject, $body, $from)) {
+                        $result = 'Thank you! We will keep you updated!';
+                      } else {
+                        $result = 'Sorry! There has been an error, please try again!';
+                      }
+                    }
+                  }
+                ?>
               <input type="email" class="form-control form-control-sm" name="email" placeholder="enter your email">
               <button type="submit" class="btn btn-signup btn-sm" name="submit" value="send">find out more</button>
             </form>
